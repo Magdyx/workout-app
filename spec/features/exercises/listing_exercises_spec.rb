@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.feature "Listing Exercises" do
   before do
     @john =  User.create(first_name: "John", last_name: "Doe", email: "john@example.com", password: "password")
-    # @sarah = User.create(first_name: "Sarah", last_name: "Anderson", email: "sarah@example.com", password: "password")
+    @sarah = User.create(first_name: "Sarah", last_name: "Anderson", email: "sarah@example.com", password: "password")
 
     login_as(@john)
 
@@ -15,11 +15,11 @@ RSpec.feature "Listing Exercises" do
                                  workout: "Weight lifting",
                                  workout_date: 2.days.ago)
 
-    # @following = Friendship.create(user: @john, friend: @sarah)
+    @following = Friendship.create(user: @john, friend: @sarah)
 
-    @e3 = @john.exercises.create(duration_in_min: 35,
-                                  workout: "On treadmill",
-                                  workout_date: 8.days.ago)
+    # @e3 = @john.exercises.create(duration_in_min: 35,
+    #                               workout: "On treadmill",
+    #                               workout_date: 8.days.ago)
   end
 
   scenario "shows user's workout for last 7 days" do
@@ -51,13 +51,13 @@ RSpec.feature "Listing Exercises" do
     expect(page).to have_content('No Workouts Yet')
   end
 
-  # scenario "shows a list of user's friends" do
-  #   visit "/"
-  #
-  #   click_link "My Lounge"
-  #   expect(page).to have_content("My Friends")
-  #   expect(page).to have_link(@sarah.full_name)
-  #   expect(page).to have_link("Unfollow")
-  # end
+  scenario "shows a list of user's friends" do
+    visit "/"
+
+    click_link "My Lounge"
+    expect(page).to have_content("My Friends")
+    expect(page).to have_link(@sarah.full_name)
+    expect(page).to have_link("Unfollow")
+  end
 
 end

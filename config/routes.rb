@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     resources :exercises
   end
 
+  resources :friendships, only: [:show, :create, :destroy]
+
   resources :dashboards, only: [:index] do
     collection do
       post :search, to: 'dashboards#search'
