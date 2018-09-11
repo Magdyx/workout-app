@@ -17,9 +17,9 @@ RSpec.feature "Listing Exercises" do
 
     # @following = Friendship.create(user: @john, friend: @sarah)
 
-    # @e3 = @john.exercises.create(duration_in_min: 35,
-    #                               workout: "On treadmill",
-    #                               workout_date: 8.days.ago)
+    @e3 = @john.exercises.create(duration_in_min: 35,
+                                  workout: "On treadmill",
+                                  workout_date: 8.days.ago)
   end
 
   scenario "shows user's workout for last 7 days" do

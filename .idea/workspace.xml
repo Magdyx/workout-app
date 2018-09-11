@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd805eec-f88c-48fd-b7ea-1a3d65fedc2c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/exercises_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/exercises_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exercises/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exercises/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/features/exercises/listing_exercises_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/features/exercises/listing_exercises_spec.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +28,7 @@
           <entry key="css" value="1" />
           <entry key="erb" value="13" />
           <entry key="js" value="3" />
-          <entry key="rb" value="23" />
+          <entry key="rb" value="24" />
           <entry key="scss" value="3" />
           <entry key="yml" value="1" />
         </counts>
@@ -40,7 +38,7 @@
           <entry key="CSS" value="1" />
           <entry key="JavaScript" value="3" />
           <entry key="RHTML" value="13" />
-          <entry key="Ruby" value="28" />
+          <entry key="Ruby" value="29" />
           <entry key="SCSS" value="3" />
           <entry key="YAML" value="1" />
         </counts>
@@ -99,8 +97,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/features/exercises/listing_exercises_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="315">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/controllers/exercises_controller_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -166,6 +173,7 @@
         <option value="$PROJECT_DIR$/app/views/exercises/index.html.erb" />
         <option value="$PROJECT_DIR$/spec/rails_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/exercises_controller.rb" />
+        <option value="$PROJECT_DIR$/spec/controllers/exercises_controller_spec.rb" />
         <option value="$PROJECT_DIR$/spec/features/exercises/listing_exercises_spec.rb" />
       </list>
     </option>
@@ -281,6 +289,12 @@
               <item name="workout-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="workout-app" type="462c0819:PsiDirectoryNode" />
               <item name="spec" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="workout-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workout-app" type="462c0819:PsiDirectoryNode" />
+              <item name="spec" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="workout-app" type="b2602c69:ProjectViewProjectNode" />
@@ -436,12 +450,12 @@
       <option name="presentableId" value="Default" />
       <updated>1536579484870</updated>
       <workItem from="1536579486022" duration="1052000" />
-      <workItem from="1536656331597" duration="4337000" />
+      <workItem from="1536656331597" duration="5141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21294000" />
+    <option name="totallyTimeSpent" value="22098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
@@ -627,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -669,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exercises/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/exercise.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -690,10 +690,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/controllers/exercises_controller_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exercises/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spec/features/exercises/listing_exercises_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="315">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
         </state>
       </provider>
     </entry>
