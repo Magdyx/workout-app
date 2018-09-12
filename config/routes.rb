@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :friendships, only: [:show, :create, :destroy]
   resources :messages, only: [:create]
 
+  mount ActionCable.server => '/cable'
+
   resources :dashboards, only: [:index] do
     collection do
       post :search, to: 'dashboards#search'
